@@ -8,7 +8,7 @@ public class Main
         int birthYear;
         int dogBirthYear;
 
-        (1 - 1 == 0) {
+        if (1 - 1 == 0) {
             System.out.println("Math is working");
         }
 
