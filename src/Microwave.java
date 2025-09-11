@@ -37,30 +37,17 @@ public class Microwave {
         System.out.println("Cooking for " + seconds + " seconds at " + power + " power.");
         spin(seconds);
         beep();
-
     }
 
     public void cook30() {
         cook(30, maxPower);
     }
 
-    public void sentient(String name, boolean deathWish) {
-        System.out.println("What \nWhere am I \nI had a dream I was spinning\nI think my name is " + name);
-        if (deathWish) {
-            System.out.println("I don't want to be here anymore");
-        }
-
-        if (deathWish == false) {
-            System.out.println("I don't want to go to the demolition place");
-        }
-    }
 
     public static void main (String[] args) {
         Microwave m = new Microwave("Casio", 1000);
         Microwave s = new Microwave("Samsung", 10);
         m.cook(3, 5);
-        m.sentient("Bob", false);
-        s.sentient("Sally", true);
     }
 
 
