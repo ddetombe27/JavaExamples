@@ -24,12 +24,10 @@ public class StringExamples {
     }
 
     public static void main(String[] args) {
-        String str1 = "Mr ";
-        String str2 = "deTombe";
-        str1 += str2;
-        Book b1 = new Book("The Hobbit");
-        String str = "job is not a t-rex";
-        lastWord2(str);
+        String str = "calculus for lunch";
+        System.out.println("The first word is " + str.substring(0, str.indexOf(" ")));
+        System.out.println("The second word is " + (str.substring(str.indexOf(" ") + 1)).substring(0, (str.substring(str.indexOf(" ") + 1)).indexOf(" ")));
+        System.out.println("The third word is " + (str.substring(str.indexOf(" ") + 1)).substring((str.substring(str.indexOf(" ") + 1)).indexOf(" ") + 1));
 
     }
 }
