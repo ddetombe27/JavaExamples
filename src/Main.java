@@ -1,28 +1,36 @@
-//import java.util.Scanner;
-//
-//public class Main {
-//    public static int myRandom(int a, int b) {
-//        int range = b - a + 1;
-//        int offset = a;
-//        return (int) (Math.random() * range) + offset;
-//    }
-//
-//    public static int mySmallRandom(int a, int b) {
-//        return myRandom(a + 1, b - 1);
-//    }
-//
-//    public static double myRoundRandom(int a, int b) {
-//        return (double) myRandom(2 * a, 2 * b) / 2;
-//    }
-//
-//    public static int userRandom() {
-//        Scanner scan = new Scanner(System.in);
-//        System.out.println("Type in 2 integers");
-//        int a = scan.nextInt();
-//        int b = scan.nextInt();
-//        return myRandom(a, b);
-//    }
-//    public static void main(String[] args) {
-//        System.out.println(userRandom());
-//    }
-//}
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // A JFrame is a window where we can design our UI
+        JFrame frame = new JFrame("My app");
+        frame.setSize(500, 500);
+        frame.setLayout(null);
+
+        // create a Button and a Label
+        JButton helloButton = new JButton("Click Me!");
+        JLabel outputLabel = new JLabel();
+
+        // place and size for components
+        // setBounds(x position, y position, width, height)
+        helloButton.setBounds(100, 100, 100, 50);
+        outputLabel.setBounds(100,200,200,50);
+        outputLabel.setFont(new Font("Arial", Font.PLAIN, 32));
+        outputLabel.setForeground(Color.BLUE);
+
+        // add components to JFrame f
+        frame.add(helloButton);
+        frame.add(outputLabel);
+
+        // add event listener for button click
+        helloButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                outputLabel.setText("Hello World!");
+            }    });
+
+        // make the frame visible
+        frame.setVisible(true);
+    }
+}

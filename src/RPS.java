@@ -1,5 +1,9 @@
 import java.util.Scanner;
 import java.util.HashMap;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
 
 public class RPS {
 
@@ -51,6 +55,35 @@ public class RPS {
         }
     }
 
+    public static void GUI() {
+        JFrame frame = new JFrame("Rock, Paper, Scissors");
+        frame.setSize(550, 250);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+
+
+        JButton rock = new JButton("Rock");
+        JButton paper = new JButton("Paper");
+        JButton scissors = new JButton("Scissors");
+
+
+
+        JLabel title = new JLabel("Welcome to my Rock, Paper, Scissors game. Click one of the buttons to play.");
+        title.setFont(new Font("Serif", Font.BOLD, 15));
+        title.setHorizontalAlignment(JLabel.CENTER);
+
+        panel.add(title);
+
+        panel.add(rock);
+        panel.add(paper);
+        panel.add(scissors);
+
+        frame.add(panel);
+
+        frame.setVisible(true);
+    }
+
 
 
 
@@ -58,6 +91,9 @@ public class RPS {
         key.put(1, "Rock");
         key.put(2, "Paper");
         key.put(3, "Scissors");
+
+        GUI();
+
 
         while (true) {
             playRound(1, true);
@@ -71,4 +107,3 @@ public class RPS {
         scan.close();
     }
 }
-
