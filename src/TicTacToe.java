@@ -3,7 +3,7 @@
 //public class TicTacToe {
 //    public static HashSet<Integer> p1Squares = new HashSet<Integer>();
 //    public static HashSet<Integer> p2Squares = new HashSet<Integer>();
-//    public static HashSet<Integer> emptySquares = new HashSet<Integer>();
+//    public static HashSet<Integer> filledSquares = new HashSet<Integer>();
 //
 //    public static boolean checkWin() {
 //        return false;
@@ -13,12 +13,23 @@
 //        p1Squares.clear();
 //        p2Squares.clear();
 //        emptySquares.clear();
+//        filledSquares.clear();
 //        Collections.addAll(emptySquares, 1, 2, 3, 4, 5, 6, 7, 8, 9);
 //    }
 //
+//    public static String getString(int square) {
+//        if (p1Squares.contains(square)) {
+//            return "X";
+//        }
+//        if (p2Squares.contains(square)) {
+//            return "O";
+//        }
+//        return " ";
+//
+//    }
+//
 //    public static void playSquare(int square, int player) {
-//        if (emptySquares.contains(square)) {
-//            emptySquares.remove(square);
+//            filledSquares.add(square);
 //            if (player == 1) {
 //                p1Squares.add(square);
 //                return;
@@ -32,9 +43,13 @@
 //        }
 //    }
 //
+//    public static void printSquare() {
+//
+//    }
+//
 //    public static void main(String[] args){
 //        System.out.println("Testing...");
 //        reset();
-//        playSquare()
+//        //playSquare();
 //    }
 //}
