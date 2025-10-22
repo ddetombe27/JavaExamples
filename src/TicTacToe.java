@@ -142,8 +142,11 @@ public class TicTacToe {
                 break;
             }
         }
-
-        System.out.println("Player " + winner + " wins!");
+        if (winner == 0) {
+            System.out.println("It's a tie.");
+        } else {
+            System.out.println("Player " + winner + " wins!");
+        }
     }
 
 
