@@ -1,6 +1,8 @@
 import java.util.*;
 
 public class TicTacToe {
+    public static Scanner scan = new Scanner(System.in);
+
     public static HashSet<Integer> p1Squares = new HashSet<Integer>();
     public static HashSet<Integer> p2Squares = new HashSet<Integer>();
     public static HashSet<Integer> filledSquares = new HashSet<Integer>();
@@ -127,7 +129,6 @@ public class TicTacToe {
         int play;
         int currentPlayer;
         reset();
-        System.out.println("Welcome to Tic-Tac-Toe!\n");
         System.out.println("These are the positions on the board:");
         printBoard();
 
@@ -151,7 +152,21 @@ public class TicTacToe {
 
 
     public static void main(String[] args) {
-        gameplay();
+        boolean playing = true;
+        String response;
+
+        System.out.println("Welcome to TIC-TAC-TOE!");
+        System.out.println("Take turns typing numbers 1-9 to play in their respective squares!");
+        System.out.println("Get three in row, column, or diagonal to win!");
+
+        while (playing)  {
+            gameplay();
+            System.out.println("Would you like to play again? Type 'y' for yes and anything else for no!");
+            response = scan.nextLine();
+            playing = response.toLowerCase().equals("y");
+        }
+
+        System.out.println("Thanks for Playing!");
     }
 }
 
