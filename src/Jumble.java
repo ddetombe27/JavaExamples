@@ -14,7 +14,7 @@ public class Jumble {
 
     public static void deJumble6(String input) {
         int count = 0;
-        int COL = 12;
+        int COL = 12   ;
         for (int h = 0; h < 6; h++) {
             for (int i = 0; i < 6; i++) {
                 for (int j = 0; j < 6; j++) {
